@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+a {
+    color: #12131d;
+    text-decoration: none;
+}
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: #f6f6f6;
+    color: #12131d;
+}
+
+header {
+    
+  // text-transform: uppercase;
+    //display: flex;
+   // grid-template-columns: auto 1fr auto;
+
+    
+    h1 {
+        text-align: center;
+        width: 80px;
+        margin: 20px auto 0 auto;
+        
+        font-size: 22px;
+        font-family: arial;
+        font-weight: 400;
+        .cow-emoji {
+            font-size: 30px
+        }
+    }
+
+    
+
+    // .header-btn {
+        //text-transform: lowercase;
+        //padding: 7px;
+       // text-align: center;
+        // display: block;
+        // width: auto;
+        //height: 30px;
+        //border-radius: 5px;
+        
+    //     border: #12131d solid 1px;
+    // }
+}
+
+.form-container {
+   width: 97%;
+    margin: 20px auto 50px auto;
+    //border-radius: 10px;
+    padding: 10px;
+    //background: white;
+    .plot {
+
+        font-size: 1.1rem;
+        resize: none; 
+        width: 100%;
+        border: none !important;
+
+    }
+}
+
+textarea::placeholder {
+    font-weight: 100;
+    font-size: 20px;
+
+  }
+
+
+
+footer {
+    
+    margin: 40px 0;
+    width: 100%;
+    p {
+        //outline: 1px solid blue;
+        text-align: center;
+    }
+}
+
+
+
+.form-inputs-1 {
+    //border-radius: 5px;
+    //margin-bottom: 20px;
+    border: 1px solid  #12131d;  
+    
+
+
+}
+.form-inputs-2 {
+    border-left: 1px solid  #12131d;
+    border-right: 1px solid  #12131d;
+    background: #fff;
+
+}
+.form-inputs-3 {
+    margin-bottom: 20px;
+    border: 1px solid  #12131d;  
+
+}
+
+::placeholder  {
+    //padding-left: 10px;
+}
+
+    input[type=text] {
+        padding: 10px 5px;
+        
+        font-family: 'Source Code Pro', monospace;
+        font-size: 0.9rem;
+        width: 100%;
+       // background: #f6f6f6;
+        border: none;
+        //border-bottom: 2px solid  #12131d;  
+     }
+
+   
+     
+
+     textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active  { 
+        outline: none !important;
+        
+    }
+     
+
+
+
+    .alert {
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+    .alert-success ,.alert-warning {
+        background: #2ECC71;
+
+
+    }
+
+    .alert-danger {
+       // background: #E74C3C;
+        background: #F4D03F;
+        
+
+
+    }
+
+
+   
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+
+    button.save-btn, button.update-btn {
+        border-radius: 5px;
+        padding: 5px 9px;
+        text-transform: uppercase;
+        border: none;
+        font-family: 'Source Code Pro', monospace;
+color: white;
+        font-size: 16px;
+        
+        background: black;
+    
+    }
+    
+
+}
