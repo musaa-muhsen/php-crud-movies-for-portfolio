@@ -18,6 +18,14 @@ body {
   color: #12131d;
 }
 
+button.save-btn:hover, button.update-btn:hover, .btn {
+  cursor: pointer;
+}
+
+.make-bigger {
+  font-size: 20px;
+}
+
 header h1 {
   text-align: center;
   width: 80px;
@@ -32,9 +40,15 @@ header h1 .cow-emoji {
 }
 
 .form-container {
-  width: 97%;
+  width: 501px;
   margin: 20px auto 50px auto;
-  padding: 10px;
+}
+
+@media all and (max-width: 500px) {
+  .form-container {
+    width: 97%;
+    margin: 20px auto 40px auto;
+  }
 }
 
 .form-container .plot {
@@ -44,33 +58,32 @@ header h1 .cow-emoji {
   border: none !important;
 }
 
-textarea::-webkit-input-placeholder {
+.form-container textarea::-webkit-input-placeholder {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-textarea:-ms-input-placeholder {
+.form-container textarea:-ms-input-placeholder {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-textarea::-ms-input-placeholder {
+.form-container textarea::-ms-input-placeholder {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-textarea::placeholder {
+.form-container textarea::placeholder {
   font-weight: 100;
-  font-size: 20px;
-}
-
-footer {
-  margin: 40px 0;
-  width: 100%;
-}
-
-footer p {
-  text-align: center;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .form-inputs-1 {
@@ -86,6 +99,11 @@ footer p {
 .form-inputs-3 {
   margin-bottom: 20px;
   border: 1px solid  #12131d;
+}
+
+textarea:focus {
+  padding: 5px 0 0 5px;
+  height: 100px;
 }
 
 input[type=text] {
@@ -143,5 +161,100 @@ label:focus,
   color: white;
   font-size: 16px;
   background: black;
+}
+
+.list-title {
+  margin-bottom: 20px;
+}
+
+.list-title h2 {
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.result-indie {
+  background: #fff;
+  border-right: 1px solid  #12131d;
+  border-top: 1px solid  #12131d;
+  border-left: 1px solid  #12131d;
+  width: 501px;
+  height: auto;
+  margin: 0 auto 30px auto;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+@media all and (max-width: 500px) {
+  .result-indie {
+    width: 97%;
+  }
+}
+
+.result-indie .info-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+.result-indie .info-row .row-name {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  height: 40px;
+  width: 50px;
+  text-align: center;
+}
+
+.result-indie .title-row {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.result-indie .plot-row .plot-writing {
+  max-height: 100px;
+  overflow: auto;
+}
+
+.result-indie .plot-row .plot-writing p::first-letter {
+  text-transform: uppercase;
+}
+
+.result-indie .seen-row {
+  padding-top: 20px;
+  border-bottom: 1px solid #12131d;
+}
+
+.result-indie .seen-row .seen-writing p::first-letter {
+  text-transform: uppercase;
+}
+
+.result-indie .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: #12131d solid 1px;
+}
+
+.result-indie .buttons-container .buttons-wrapper {
+  padding-right: 10px;
+}
+
+.result-indie:last-child {
+  margin: 0 !important;
+}
+
+footer {
+  margin: 20px 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

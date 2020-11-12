@@ -22,7 +22,7 @@ if (isset($_POST['save'])) {
     $mysqli->query("INSERT INTO data (name, location, seen) VALUES('$name', '$location', '$seen')") or die($mysqli->error);
     
 
-    $_SESSION['message'] = "&#127902; saved!";
+    $_SESSION['message'] = "&#127902; Saved!";
     $_SESSION['msg_type'] = "success";
 
     header("location: index.php");
