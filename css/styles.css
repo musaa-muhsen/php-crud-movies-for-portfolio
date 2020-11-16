@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style: none;
 }
 
@@ -31,7 +31,7 @@ header h1 {
   width: 80px;
   margin: 20px auto 0 auto;
   font-size: 22px;
-  font-family: arial;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
 }
 
@@ -59,29 +59,37 @@ header h1 .cow-emoji {
 }
 
 .form-container textarea::-webkit-input-placeholder {
-  font-weight: 100;
-  font-size: 12px;
+  font-family: 'Source Code Pro', monospace;
+  color: #12131d;
+  font-weight: 400;
+  font-size: 16px;
   padding-top: 5px;
   padding-left: 5px;
 }
 
 .form-container textarea:-ms-input-placeholder {
-  font-weight: 100;
-  font-size: 12px;
+  font-family: 'Source Code Pro', monospace;
+  color: #12131d;
+  font-weight: 400;
+  font-size: 16px;
   padding-top: 5px;
   padding-left: 5px;
 }
 
 .form-container textarea::-ms-input-placeholder {
-  font-weight: 100;
-  font-size: 12px;
+  font-family: 'Source Code Pro', monospace;
+  color: #12131d;
+  font-weight: 400;
+  font-size: 16px;
   padding-top: 5px;
   padding-left: 5px;
 }
 
 .form-container textarea::placeholder {
-  font-weight: 100;
-  font-size: 12px;
+  font-family: 'Source Code Pro', monospace;
+  color: #12131d;
+  font-weight: 400;
+  font-size: 16px;
   padding-top: 5px;
   padding-left: 5px;
 }
@@ -97,7 +105,7 @@ header h1 .cow-emoji {
 }
 
 .form-inputs-3 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid  #12131d;
 }
 
@@ -106,11 +114,32 @@ textarea:focus {
   height: 100px;
 }
 
+::-webkit-input-placeholder {
+  color: #12131d;
+  font-family: 'Source Code Pro', monospace;
+}
+
+:-ms-input-placeholder {
+  color: #12131d;
+  font-family: 'Source Code Pro', monospace;
+}
+
+::-ms-input-placeholder {
+  color: #12131d;
+  font-family: 'Source Code Pro', monospace;
+}
+
+::placeholder {
+  color: #12131d;
+  font-family: 'Source Code Pro', monospace;
+}
+
 input[type=text] {
   padding: 10px 5px;
   font-family: 'Source Code Pro', monospace;
   font-size: 0.9rem;
   width: 100%;
+  color: #12131d;
   border: none;
 }
 
@@ -126,7 +155,35 @@ button:hover,
 label:focus,
 .btn:active,
 .btn.active {
+  font-family: 'Source Code Pro', monospace;
   outline: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
 }
 
 .alert {
@@ -148,8 +205,8 @@ label:focus,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .submit-container button.save-btn, .submit-container button.update-btn {
@@ -160,11 +217,19 @@ label:focus,
   font-family: 'Source Code Pro', monospace;
   color: white;
   font-size: 16px;
-  background: black;
+  background: #12131d;
 }
 
 .list-title {
+  margin: 0 auto;
+  width: 501px;
   margin-bottom: 20px;
+}
+
+@media all and (max-width: 500px) {
+  .list-title {
+    width: 97%;
+  }
 }
 
 .list-title h2 {
@@ -199,7 +264,7 @@ label:focus,
 
 .result-indie .info-row .row-name {
   -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
   height: 40px;
   width: 50px;
   text-align: center;
@@ -234,8 +299,8 @@ label:focus,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom: #12131d solid 1px;
@@ -256,5 +321,31 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.select-babe {
+  padding: 3px;
+  border: #12131d solid 1px;
+  font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 15px;
+}
+
+.split-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.split-div article {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.make-small {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,27 +1,28 @@
 <?php 
 
+// always at the top 
 session_start(); 
 
-$mysqli = new mysqli('localhost', 'musaa', '1234', 'crud-tut-1') or die(mysqli_error($mysqli));
+ $mysqli = new mysqli('localhost', 'musaa', '1234', 'crud-tut-1') or die(mysqli_error($mysqli));
+//$mysqli = new mysqli('localhost', 'ubvbtwazxdfbm', '1F15(do^15sj', 'dbt6jaem5yn8tj') or die(mysqli_error($mysqli));
 
-if(!$mysqli) {
-    echo 'connection error' . mysqli_connect_error(); 
- }
-$name = $location = $seen = '';
+// die() function Print a message and terminate the current script: // The die() function is an alias of the exit() function.
+
+$name = $plot = $seen = '';
 $update = false;
+$babe = 'Babe Friendly';
 
 // check if save has been pressed 
 if (isset($_POST['save'])) {
     $name = $mysqli -> real_escape_string($_POST['name']);
-    $location = $mysqli -> real_escape_string($_POST['location']);
+    $plot = $mysqli -> real_escape_string($_POST['plot']);
     $seen = $mysqli -> real_escape_string($_POST['seen']);
+    $babe = $mysqli -> real_escape_string($_POST['babe']);
 
  
     // insert into database 
-    // The die() function is an alias of the exit() function.
-    $mysqli->query("INSERT INTO data (name, location, seen) VALUES('$name', '$location', '$seen')") or die($mysqli->error);
     
-
+    $mysqli->query("INSERT INTO data (name, plot, seen, babe) VALUES('$name', '$plot', '$seen', '$babe' )") or die($mysqli->error);
     $_SESSION['message'] = "&#127902; Saved!";
     $_SESSION['msg_type'] = "success";
 
@@ -48,8 +49,9 @@ if (isset($_GET['edit'])) {
     if($result->num_rows) { 
        $row = $result->fetch_array();
        $name = $row['name'];
-       $location = $row['location'];
+       $plot = $row['plot'];
        $seen = $row['seen'];
+       $babe = $row['babe'];
     }
      
 }
@@ -58,10 +60,11 @@ if (isset($_GET['edit'])) {
 if (isset($_POST['update'])) {
     $id = $mysqli -> real_escape_string($_POST['id']);
     $name = $mysqli -> real_escape_string($_POST['name']);
-    $location = $mysqli -> real_escape_string($_POST['location']);
+    $plot = $mysqli -> real_escape_string($_POST['plot']);
     $seen = $mysqli -> real_escape_string($_POST['seen']);
+    $babe = $mysqli -> real_escape_string($_POST['babe']);
 
-    $mysqli->query("UPDATE data SET name='$name', location='$location', seen='$seen' WHERE id=$id") or die($mysqli->error); 
+    $mysqli->query("UPDATE data SET name='$name', plot='$plot', seen='$seen', babe='$babe' WHERE id=$id") or die($mysqli->error); 
 
     $_SESSION['message'] = "&#9989; Updated!";
     $_SESSION['msg_type'] = "warning";

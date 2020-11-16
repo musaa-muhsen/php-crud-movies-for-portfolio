@@ -8,10 +8,7 @@
     <style>
   <?php include "./css/styles.css" ?>
 </style>
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
 </head>
 <body>
 
@@ -46,13 +43,22 @@
 
        <div class="form-inputs form-inputs-2">
        
-       <textarea class="plot form-single" placeholder="Plot:" name="location"  value="<?php echo $location; ?>"></textarea>
+       <textarea class="plot form-single" placeholder="Plot:" name="plot" ><?php echo $plot; ?></textarea>
 
        </div>
 
        <div class="form-inputs form-inputs-3">
        <!-- <label>Seen on:</label> &#128190; // floppy desk -->
        <input  type="text" name="seen" class="form-single seen-input" value="<?php echo $seen; ?>"  placeholder="Seen on:">
+       </div>
+       <div>
+          <!-- <input type="checkbox"  name="babe" value="babe friendly">
+          <label for="babe">Babe Friendly</label> -->
+          <select class="select-babe" name="babe">
+  <option name="babe1" value="Babe Friendly">Babe friendly</option>
+  <option name="babe2" value="Not Babe Friendly">Not babe friendly</option>
+
+</select>
        </div>
 
        <div class="submit-container">
@@ -74,10 +80,7 @@
 
 // this becomes objected oriented???
 $mysqli = new mysqli('localhost', 'musaa', '1234', 'crud-tut-1') or die(mysqli_error($mysqli));
-
-if(!$mysqli) {
-    echo 'connection error' . mysqli_connect_error(); 
- }
+//$mysqli = new mysqli('localhost', 'ubvbtwazxdfbm', '1F15(do^15sj', 'dbt6jaem5yn8tj') or die(mysqli_error($mysqli));
 
 // -> calls/sets object variables. // The object operator, ->, is used in object scope to access methods and properties of an object. It’s meaning is to say that what is on the right of the operator is a member of the object instantiated into the variable on the left side of the operator. Instantiated is the key term here.
 $result = $mysqli->query("SELECT * FROM data ORDER BY created_at DESC") or die($mysqli->error);
@@ -90,10 +93,11 @@ $result = $mysqli->query("SELECT * FROM data ORDER BY created_at DESC") or die($
     <section class="result-indie">
        <!-- 📝 -->
            <article class="title-row info-row"><div class="row-name"><p class="make-bigger">🎬</p></div>  <div> <p><?php echo $row['name']; ?></p> </div></article> 
-           <article class="plot-row info-row"><div class="row-name"><p class="make-bigger">📖</p></div>  <div class="plot-writing"> <p><?php echo $row['location']; ?></p> </div></article> 
+           <article class="plot-row info-row"><div class="row-name"><p class="make-bigger">📖</p></div>  <div class="plot-writing"> <p><?php echo $row['plot']; ?></p> </div></article> 
+           <div class="split-div">
            <article class="seen-row info-row"><div class="row-name"><p class="make-bigger">👀</p></div>  <div class="seen-writing"> <p><?php echo $row['seen']; ?></p> </div></article> 
-        
-
+           <article class="seen-row info-row"><div class="row-name"><p class="make-bigger">🔞</p></div>  <div class="seen-writing"> <p class="make-small"><?php echo $row['babe']; ?></p> </div></article>
+          </div>
         <div class="buttons-container">
            <div class="buttons-wrapper">
                <a href="index.php?edit=<?php echo $row['id']; ?>" class="btn btn-info make-bigger">✏️</a>
